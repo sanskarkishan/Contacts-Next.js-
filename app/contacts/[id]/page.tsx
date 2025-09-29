@@ -1,5 +1,5 @@
 import SideMenu from "@/components/sideMenu";
-import { CONTACTS_MOCK } from "@/mock/contacts";
+// import { CONTACTS_MOCK } from "@/mock/contacts";
 
 export default async function ContactPage({params}) {
   const { id } = await params;
