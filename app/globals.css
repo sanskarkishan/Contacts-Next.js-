@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.layout {
+  max-width: 70rem;
+  min-height: 100vh;
+  margin: auto;
+  padding: 16px 16px;
+  background-color: rgb(8, 8, 8);
+  color: white;
+}
+
