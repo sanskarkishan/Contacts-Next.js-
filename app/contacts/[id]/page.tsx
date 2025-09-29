@@ -1,7 +1,7 @@
 import SideMenu from "@/components/sideMenu";
 // import { CONTACTS_MOCK } from "@/mock/contacts";
 
-export default async function ContactPage({params}) {
+export default async function ContactPage({ params }: { params: { id: string } }) {
   const { id } = await params;
   // Fetch contacts from the mock API
   const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contacts/${id}`);
