@@ -1,17 +1,14 @@
 import SideMenu from "@/components/sideMenu";
 import { CONTACTS_MOCK } from "@/mock/contacts";
 
-export default async function ContactPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function ContactPage({params}) {
+  const { id } = await params;
   // Fetch contacts from the mock API
   const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contacts`);
   const contacts = await data.json();
   // console.log(contacts);
   // const contact = CONTACTS_MOCK.find((c) => c.id === params.id);
-  const contact = contacts.find((c) => c.id === params.id);
+  const contact = contacts.find((contact) => contact.id === id);
 
   return (
     <>
